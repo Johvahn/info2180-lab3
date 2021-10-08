@@ -1,21 +1,18 @@
 window.addEventListener('DOMContentLoaded' , () => {
-    var children= document.getElementById('board').children;
-    for(let child=0; child < children.length; child++){
-        children[child].setAttribute('class', 'square');
-        children[child].addEventListener('click', (o) => {
-            children[child].textContent = 'o'
-            
-        });
-        children[child].addEventListener('click', (x) => {
-            children[child].textContent = 'x'
-            
-            
-        });
-        
-         
+    var board = document.getElementById("board");
+    var boardSquares = board.querySelectorAll("div");
+    boardSquares.forEach(boardSquares =>{
+        boardSquares.className = 'square';
+        boardSquares.addEventListener('click', function(){
+            boardSquares.textContent = "O";
+            boardSquares.classList.add("O");
 
+        })
+    });
        
-        };
+            
+            
+        
         
         
         
